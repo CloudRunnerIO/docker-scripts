@@ -1,0 +1,7 @@
+#! /bin/bash
+
+NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" -o -t DOCKER ARCH.2014
+
+NO_COLORS=1 cloudrunner-node details
+
+NO_COLORS=1 cloudrunner-node run

@@ -1,10 +1,10 @@
-FROM fedora:21
+FROM base/arch
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN yum update -y
+RUN pacman -Syu --noconfirm
 
-RUN yum -y install wget python-devel swig gcc-c++ openssl-devel vim htop openssh rpm-build make python-setuptools git-core m2crypto python-msgpack openssl
+RUN pacman -Sy --noconfirm wget python2 python2-pip swig gcc openssl python2-setuptools
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner
@@ -18,3 +18,4 @@ RUN wget --no-cache -O - https://raw.githubusercontent.com/CloudRunnerIO/cloudru
    CRN_NORUN=1 CRN_SERVER=0.0.0.0 /bin/bash
 
 ENTRYPOINT ["/opt/startup"]
+

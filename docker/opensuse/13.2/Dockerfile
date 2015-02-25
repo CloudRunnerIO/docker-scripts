@@ -1,12 +1,8 @@
-FROM centos:centos6.6
+FROM opensuse:harlequin
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN yum update -y
-
-RUN yum -y install epel-release
-
-RUN yum -y install wget python-devel swig gcc-c++ openssl-devel vim htop openssh rpm-build make python-setuptools git-core m2crypto python-msgpack openssl
+RUN zypper -n in gcc-c++ python-devel openssl-devel git swig python-m2crypto
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner

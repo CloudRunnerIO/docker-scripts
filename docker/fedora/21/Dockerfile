@@ -1,4 +1,4 @@
-FROM centos:centos6.6
+FROM fedora:21
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 

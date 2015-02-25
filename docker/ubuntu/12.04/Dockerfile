@@ -4,7 +4,7 @@ MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
 RUN apt-get update
 
-RUN apt-get -y install wget g++ python-dev python-pip swig libssl-dev m2crypto msgpack-python
+RUN apt-get -y install wget g++ python-dev python-pip swig libssl-dev m2crypto msgpack-python ca-certificates
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner

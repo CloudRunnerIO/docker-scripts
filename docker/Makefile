@@ -52,33 +52,19 @@ ubuntu:
 .PHONY: push
 push:
 	# Arch
-	sudo docker push cloudrunnerio/arch:2014.01
-	sudo docker push cloudrunnerio/arch:2014.07
-	sudo docker push cloudrunnerio/arch:latest
+	sudo docker push cloudrunnerio/arch
 
 	# Centos
-	sudo docker push cloudrunnerio/centos:centos6
-	sudo docker push cloudrunnerio/centos:centos7
-	sudo docker push cloudrunnerio/centos:latest
+	sudo docker push cloudrunnerio/centos
 
 	# Debian
-	sudo docker push cloudrunnerio/debian:squeeze
-	sudo docker push cloudrunnerio/debian:wheezy
-	sudo docker push cloudrunnerio/debian:jessie
-	sudo docker push cloudrunnerio/debian:latest
+	sudo docker push cloudrunnerio/debian
 
 	# Fedora
-	sudo docker push cloudrunnerio/fedora:20
-	sudo docker push cloudrunnerio/fedora:21
-	sudo docker push cloudrunnerio/fedora:latest
+	sudo docker push cloudrunnerio/fedora
 
 	# OpenSUSE
-	sudo docker push cloudrunnerio/opensuse:bottle
-	sudo docker push cloudrunnerio/opensuse:harlequin
-	sudo docker push cloudrunnerio/opensuse:latest
+	sudo docker push cloudrunnerio/opensuse
 
 	# Ubuntu
-	sudo docker push cloudrunnerio/ubuntu:12.04
-	sudo docker push cloudrunnerio/ubuntu:14.04
-	sudo docker push cloudrunnerio/ubuntu:14.10
-	sudo docker push cloudrunnerio/ubuntu:latest
+	sudo docker push cloudrunnerio/ubuntu

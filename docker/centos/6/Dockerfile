@@ -2,7 +2,7 @@ FROM centos:centos6.6
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN yum update -y
+RUN yum updatesd -y
 
 RUN yum -y install epel-release
 

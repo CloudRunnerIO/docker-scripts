@@ -6,7 +6,7 @@ RUN yum update -y
 
 RUN yum -y install epel-release
 
-RUN yum -y install python-zmq python-pip m2crypto python-msgpack python-psutil
+RUN yum -Cy install python-zmq python-pip m2crypto python-msgpack python-psutil
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner

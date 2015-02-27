@@ -4,7 +4,7 @@ MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
 RUN yum update -y
 
-RUN yum -y install python-pip m2crypto python-msgpack python-zmq python-psutil
+RUN yum -Cy install python-pip m2crypto python-msgpack python-zmq python-psutil
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner

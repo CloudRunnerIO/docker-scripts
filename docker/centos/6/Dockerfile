@@ -3,9 +3,8 @@ FROM centos:centos6.6
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
 RUN yum -y install epel-release
-RUN yum makecache
-RUN yum update -Cy
-RUN yum -Cy install python-zmq python-pip m2crypto python-msgpack python-psutil
+RUN yum update -y
+RUN yum -y install python-zmq python-pip m2crypto python-msgpack python-psutil
 
 RUN mkdir -p /etc/cloudrunner
 RUN mkdir -p /opt/cloudrunner

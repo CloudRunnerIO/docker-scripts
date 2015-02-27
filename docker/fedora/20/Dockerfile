@@ -2,8 +2,8 @@ FROM fedora:20
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN yum update -y
-
+RUN yum makecache
+RUN yum update -Cy
 RUN yum -Cy install python-pip m2crypto python-msgpack python-zmq python-psutil
 
 RUN mkdir -p /etc/cloudrunner
@@ -15,9 +15,7 @@ ADD startup /opt/startup
 ADD cloudrunner-node.conf /etc/cloudrunner/cloudrunner-node.conf
 
 RUN pip install cloudrunner
-
 RUN cloudrunner-node configure --server 0.0.0.0
-
 RUN cloudrunner-node details
 
 ENTRYPOINT ["/opt/startup"]

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" -o -t DOCKER DEBIAN8
+NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" -o -t DOCKER UBUNTU-12.04
 
 NO_COLORS=1 cloudrunner-node details
 

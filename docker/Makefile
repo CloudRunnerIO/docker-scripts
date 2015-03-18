@@ -49,6 +49,8 @@ ubuntu:
 
 	docker build -t cloudrunnerio/ubuntu:14.10 ${BARGS} ubuntu/14.10
 
+	docker build -t cloudrunnerio/ubuntu:15.04 ${BARGS} ubuntu/15.04
+
 .PHONY: push
 push:
 	# Arch

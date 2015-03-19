@@ -1,8 +1,12 @@
 #! /bin/bash
 
-CLUP=""
-DEF_TAGS="DOCKER FEDORA20"
-if [ -n "$AUTO_CLEANUP" ]; then CLUP="-l"; fi
+if [ ! -f "/etc/cloudrunner/ready" ]; then
+	CLUP=""
+	DEF_TAGS="DOCKER FEDORA20"
+	if [ -n "$AUTO_CLEANUP" ]; then CLUP="-l"; fi
+	NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" $CLUP -o -t ${TAGS:-$DEF_TAGS}
+	touch /etc/cloudrunner/ready
+fi
 
 NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" $CLUP -o -t ${TAGS:-$DEF_TAGS}
 

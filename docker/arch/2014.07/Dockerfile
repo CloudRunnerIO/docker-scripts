@@ -2,6 +2,9 @@ FROM base/archlinux
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
+RUN pacman-key --refresh-keys
+RUN pacman-key --populate archlinux
+
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade
 RUN pacman -Sy --noconfirm python2 python2-pip python2-m2crypto gcc

@@ -2,9 +2,6 @@ FROM base/archlinux
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN rm -rf /etc/pacman.d/gnupg
-RUN pacman-key --init
-
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade
 RUN pacman -Sy --noconfirm python2 python2-pip python2-m2crypto gcc

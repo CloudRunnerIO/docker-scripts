@@ -3,6 +3,7 @@ FROM base/arch
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
 RUN pacman-key --refresh-keys
+RUN pacman-key --populate archlinux
 
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade

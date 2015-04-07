@@ -10,7 +10,7 @@ RUN mkdir -p /opt/cloudrunner
 RUN mkdir -p /var/run/sock/cloudrunner/
 RUN mkdir -p /var/lib/cloudrunner/
 
-RUN pip install -U cloudrunner
+RUN pip install cloudrunner
 RUN cloudrunner-node configure --server 0.0.0.0
 RUN cloudrunner-node details
 

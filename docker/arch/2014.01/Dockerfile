@@ -2,8 +2,7 @@ FROM base/arch
 
 MAINTAINER CloudRunner.IO Dev, dev@cloudrunner.io
 
-RUN rm -rf /etc/pacman.d/gnupg
-RUN pacman-key --init
+RUN pacman-key --refresh-keys
 
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade

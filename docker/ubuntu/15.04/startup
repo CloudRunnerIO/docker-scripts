@@ -8,8 +8,6 @@ if [ ! -f "/etc/cloudrunner/ready" ]; then
 	touch /etc/cloudrunner/ready
 fi
 
-NO_COLORS=1 cloudrunner-node configure --id "$HOSTNAME" --server "$SERVER_ID" --org "$ORG_ID" $CLUP -o -t ${TAGS:-$DEF_TAGS}
-
 NO_COLORS=1 cloudrunner-node details
 
 NO_COLORS=1 cloudrunner-node run
